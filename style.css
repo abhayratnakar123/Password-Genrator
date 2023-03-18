@@ -1,0 +1,280 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+
+}
+
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: rgb(238,174,202);
+background: -moz-linear-gradient(260deg, rgba(238,174,202,1) 11%, rgba(221,176,208,1) 28%, rgba(148,187,233,1) 100%);
+background: -webkit-linear-gradient(260deg, rgba(238,174,202,1) 11%, rgba(221,176,208,1) 28%, rgba(148,187,233,1) 100%);
+background: linear-gradient(260deg, rgba(238,174,202,1) 11%, rgba(221,176,208,1) 28%, rgba(148,187,233,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeaeca",endColorstr="#94bbe9",GradientType=1);
+}
+.container{
+    width: 90%;
+    max-width: 450px;
+
+}
+
+h1{
+    color: Indigo;
+    text-align: center;
+    opacity: 0.75;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Tilt Warp', cursive;
+    font-family: 'Unbounded', cursive;
+}
+
+.display-container{
+    position: relative;
+    background-color: transparent;
+    border-radius: 1rem;
+    border-bottom: 0.35rem solid lightpink;
+    margin: 1rem 0;
+    padding-top: 0.35rem;
+}
+
+.display{
+    width: 100%;
+    background-color: rgb(187, 0, 255);
+    padding:1.15rem 1rem;
+    color: antiquewhite;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 30px;
+    letter-spacing: 1px;
+    padding-right: 3.25rem; 
+    border: none;
+    font-family: 'Poppins', sans-serif;
+font-family: 'Tilt Warp', cursive;
+font-family: 'Unbounded', cursive;
+}
+.display::placeholder{
+    position: absolute;
+    top: 50%;
+    left: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 30px;
+    color: white;
+    opacity: 0.60;
+    text-transform: uppercase;
+    transform: translateY(-50%);
+    font-family: 'Poppins', sans-serif;
+font-family: 'Tilt Warp', cursive;
+font-family: 'Unbounded', cursive;
+
+}
+
+.display-container button{
+    position: absolute;
+    top: 50%;
+    right: 1.5rem;
+    transform: translateY(-50%);
+
+}
+
+
+.input-container{
+    width: 100%;
+    background-color: blueviolet;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.length-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.length-container p:nth-child(1){
+    color: wheat;
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+font-family: 'Tilt Warp', cursive;
+font-family: 'Unbounded', cursive;
+}
+
+.length-container p:nth-child(2){
+    color: rgb(241, 187, 87);
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Tilt Warp', cursive;
+    font-family: 'Unbounded', cursive;
+}
+
+.strength-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.75rem;
+    margin-bottom: 2rem;
+}
+
+.strength-container p{
+color: white;
+font-size: 2rem;
+font-family: 'Poppins', sans-serif;
+font-family: 'Tilt Warp', cursive;
+font-family: 'Unbounded', cursive;
+}
+
+.indecator{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius:50%;
+}
+
+.generateButton{
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    padding: 1rem 0;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
+    border: none;
+    border-radius: 0.5rem;
+    color: purple;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Tilt Warp', cursive;
+    font-family: 'Unbounded', cursive;
+    font-size: 1rem;
+    border-bottom: 0.35rem solid lightpink;
+
+}
+
+.check{
+    display: flex;
+    align-items: center;
+    margin:1rem 0;
+    gap: 0 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Tilt Warp', cursive;
+    font-family: cursive;
+
+}
+
+.check input{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgb(250, 250, 250);
+    cursor: pointer;
+    position: relative;
+    border-radius: 0.35rem;
+}
+
+.check input:checked{
+    background-color: #ffffff;
+}
+
+.check input:checked::before{
+    content: '✓';
+    position: absolute;
+    font-size: 1.05rem;
+    font-weight: 600;
+    left: 50%;
+    transform: translateX(-50%) translateY(40%);
+    bottom: 0.5rem;
+} 
+
+.check label{
+
+    color: wheat;
+    font-size: 1.25rem;
+    letter-spacing: 0.75px;
+    font-weight: bold;
+}
+
+.slider{
+    appearance: none;
+    width: 100%;
+    height: 0.75rem;
+    cursor: pointer;
+    background-color: #fbc2eb;
+    background-image: linear-gradient(to right bottom, #fba1f4, #f586f5, #ec6af7, #e14bfb, #d21dff);
+    border-radius: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    background-repeat: no-repeat;
+
+}
+
+/* thats select the thumb element webkit slider thum  */
+.slider::-webkit-slider-thumb{
+    position: relative;
+    appearance: none;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: #a6c1ee;
+    background-image: l;
+    cursor: pointer;
+    margin-top: -3px;
+    z-index: 1;
+}
+/* 
+.slider:focus{
+    outline: 3px solid #ffffff;
+
+} */
+
+
+.slider::-webkit-slider-thumb:hover{
+    outline: 1px solid #ffffff;
+}
+
+.copy-btn{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.tool-tip{
+    background-color: #a6c1ee;
+    position: absolute;
+    font-size:1.10rem;
+    bottom: 30px;
+    left: -25px;
+    padding: 5px 6px;
+    border-radius: 1rem;
+    opacity: 0;
+    transform: scale(1);
+    transform-origin: bottom;
+    transform: all 250ms ease-in-out;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Tilt Warp', cursive;
+    font-family: cursive;
+
+}
+.tool-tip.active{
+opacity: 1;
+transform: scale(1); 
+}
+
+
+
+
+
+
+
+
+
+
+
+
